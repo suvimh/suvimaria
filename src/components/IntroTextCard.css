@@ -1,0 +1,64 @@
+.introtext-wrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--blue);
+  border-radius: 20px;
+  flex-wrap: nowrap; /* side by side until breakpoint */
+}
+
+/* LEFT SIDE */
+.introtext-left {
+  flex: 1 1 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* RIGHT SIDE — Image */
+.introtext-right {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.artistlogo {
+  width: 80%;
+  max-width: 250;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+/* Text styling */
+.introtext-left p {
+  font-size: clamp(20px, 2.5vw, 40px);
+  line-height: 1.5;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive: stack vertically below 768px */
+@media (max-width: 1224px) {
+  .introtext-wrapper {
+    flex-direction: column;
+  }
+
+  .introtext-right {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .artistlogo {
+    max-width: 80%;
+    margin: 2rem;
+  }
+
+  .introtext-left p {
+    font-size: 30px;
+  }
+}
