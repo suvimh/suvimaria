@@ -1,0 +1,108 @@
+/* src/index.css */
+
+/* Fonts */
+:root {
+  --font-spartan: "League Spartan", sans-serif;
+
+  /* Colors */
+  --pink: #ffd3c7;
+  --orange: #f09b40;
+  --blue: #446a83;
+  --green: #5c7f56;
+  --white: #ece7ec;
+  --black: #000000;
+
+  /* Font sizes */
+  --h1: 119px;
+  --h2: 50px;
+  --p: 18px;
+}
+
+/* Global styles */
+body {
+  font-family: var(--font-spartan);
+  background-color: var(--white);
+  color: var(--black);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+.h1 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 900;
+  font-size: var(--h1);
+  line-height: 1;
+}
+
+.h2 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: var(--h2);
+  color: var(--blue);
+  line-height: 1;
+}
+
+.p {
+  font-size: var(--p);
+}
+
+/* Layout helpers */
+.text-center {
+  text-align: center;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-16 {
+  gap: 4rem; /* roughly equivalent to Tailwind's gap-16 */
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+/* Grid helpers */
+.grid {
+  display: grid;
+}
+
+.grid-cols-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 50px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.socials-wrapper,
+.introtext-wrapper {
+  width: 100%; 
+}
+
+/* Responsive stacking */
+@media (max-width: 1200px) {
+  .info-container {
+    grid-template-columns: 1fr; 
+    gap: 30px;
+  }
+}
